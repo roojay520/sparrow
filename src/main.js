@@ -1,15 +1,14 @@
 import 'normalize.css';
 import '@/assets/icons';
 import '@/assets/scss/element';
+import '@/components/ElementUI';
+import components from '@/components';
 import Vue from 'vue';
-import { Form, FormItem, Button } from 'element-ui';
 import App from './App';
 import router from './router';
 import store from './store';
 
-Vue.use(Form);
-Vue.use(FormItem);
-Vue.use(Button);
+Vue.use(components);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

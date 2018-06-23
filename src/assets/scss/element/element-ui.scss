@@ -1,8 +1,14 @@
 // element ui 样式覆盖
 
-$theme_clr: #409EFF;
+$theme_clr: #f1404b;
 /* 改变主题色变量 */
 $--color-primary: $theme_clr;
+
+$--color-success: #28a745;
+$--color-warning: #ffc107;
+$--color-danger: #f56c6c;
+$--color-info: #dddfe6;
+
 
 /* 改变 icon 字体路径变量，必需 */
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
