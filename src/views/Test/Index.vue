@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>hello</h1>
+    <h1>{{msg}}</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-
+      msg: '测试内容!',
     };
   },
 };
