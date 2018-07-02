@@ -1,5 +1,5 @@
 <template>
-  <svg :class="svgClass" aria-hidden="true">
+  <svg :class="svgClass" :style="style" aria-hidden="true">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>
@@ -8,34 +8,45 @@
 export default {
   name: 'svg-icon',
   props: {
-    iconClass: {
+    icon: {
       type: String,
       required: true,
     },
     className: {
       type: String,
+      required: false,
+    },
+    size: {
+      type: String,
+      required: false,
+      default: () => '1.2rem',
+    },
+    color: {
+      type: String,
+      required: false,
+      default: () => 'currentColor',
     },
   },
   computed: {
     iconName() {
-      return `#icon-${this.iconClass}`;
+      return `#icon-${this.icon}`;
     },
     svgClass() {
       if (this.className) {
-        return `svg-icon ${this.className}`;
+        return ` ${this.class}`;
       }
       return 'svg-icon';
+    },
+    style() {
+      return `width:${this.size};
+              height:${this.size};
+              fill:${this.color};`;
     },
   },
 };
 </script>
-
-<style scoped>
-.svg-icon {
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: -0.2em;
-  fill: currentColor;
-  overflow: hidden;
+<style>
+.svg-icon{
+   vertical-align: -0.25rem;
 }
 </style>

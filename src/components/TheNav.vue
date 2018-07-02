@@ -26,21 +26,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$red: #e86568;
-$black: #222;
+@import 'src/assets/scss/index';
+
 .nav-wrap {
   width: 100%;
   height: 56px;
   display: flex;
   flex-direction: row;
-  background-color: #fff;
+  background-color: $clr-white;
   align-items: center;
   transition: all .3s ease;
-  box-shadow: 0 0 4px 0 rgba(0,0,0,.01), 0 4px 4px 0 rgba(0,0,0,.04);
+  box-shadow: $shadow-nav;
    a {
       display: inline-block;
       text-align: center;
-      color: $black;
+      color: $clr-black;
       text-decoration: none;
       font-size: 1rem;
       line-height: 56px;
@@ -48,11 +48,11 @@ $black: #222;
       margin: 0 2rem;
       border-bottom: solid .1rem transparent;
       &:hover{
-        color: $red;
+        color: $clr-main;
       }
       &.active{
-        color: $red;
-        border-bottom-color: $red;
+        color: $clr-main;
+        border-bottom-color: $clr-main;
       }
     }
 }
